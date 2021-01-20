@@ -10,6 +10,16 @@ CREATE TABLE companies
 	bussinessSector TEXT,
 	contactInfo TEXT
 );
+CREATE TABLE internships
+(
+	positionTitle TEXT,
+	companyName TEXT,
+	deadline TEXT,
+	duration TEXT,
+	responsibilities TEXT,
+	pay DOUBLE,
+	otherInfo TEXT
+);
 
 
 
