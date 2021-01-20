@@ -3,8 +3,12 @@
 
 
 
-CREATE TABLE interships
+CREATE TABLE companies
 (
+	companyName TEXT,
+	companyLocation TEXT,
+	bussinessSector TEXT,
+	contactInfo TEXT
 );
 
 
