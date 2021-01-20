@@ -14,14 +14,17 @@ CREATE TABLE internships
 (
 	positionTitle TEXT,
 	companyName TEXT,
-	deadline TEXT,
-	duration TEXT,
+	deadline DATE,
+	duration DATE,
 	responsibilities TEXT,
 	pay DOUBLE,
 	otherInfo TEXT
 );
 
+CREATE VIEW internshipByDate as
+	SELECT * FROM internships ORDER BY deadline;
 
+SELECT * FROM internshipByDate
 
 /*
 	A table for the companies, to include the Name, location, business sector and contact information
