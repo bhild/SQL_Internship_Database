@@ -20,14 +20,21 @@ CREATE TABLE internships
 	pay DOUBLE,
 	otherInfo TEXT
 );
-INSERT INTO internships VALUES 
-	('test0','sample0', date('2021-12-20'),100,'sample0',1.0,'null'),
-	('test1','sample1', date('2021-12-21'),100,'sample1',1.0,'null');
-
 CREATE VIEW internshipByDate as
 	SELECT * FROM internships ORDER BY deadline;
 
-SELECT * FROM internshipByDate
+INSERT INTO internships VALUES 
+	('test0','sample0', date('2021-12-21'),100,'sample0',1.0,'null'),
+	('test1','sample1', date('2021-12-20'),100,'sample1',1.0,'null');
+
+
+
+INSERT INTO internships VALUES 
+	('test2','sample2', date('2021-12-19'),100,'sample2',1.0,'null');
+
+
+SELECT * FROM internshipByDate;
+
 
 /*
 	A table for the companies, to include the Name, location, business sector and contact information
