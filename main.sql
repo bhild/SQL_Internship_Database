@@ -20,10 +20,17 @@ CREATE TABLE internships
 	pay DOUBLE,
 	otherInfo TEXT
 );
+INSERT INTO internships VALUES 
+	('test0','sample0', date('2021-12-21'),100,'sample0',1.0,'null');
 CREATE VIEW internshipByDate as
 	SELECT * FROM internships ORDER BY deadline;
+DROP TABLE IF EXISTS internships;
+.mode csv
+.import internships.csv internships
 
-INSERT INTO internships VALUES 
+
+
+/*INSERT INTO internships VALUES 
 	('test0','sample0', date('2021-12-21'),100,'sample0',1.0,'null'),
 	('test1','sample1', date('2021-12-20'),100,'sample1',1.0,'null');
 
