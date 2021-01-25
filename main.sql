@@ -6,13 +6,13 @@ CREATE VIEW internshipByDate as
 	SELECT * FROM internships ORDER BY deadline;
 CREATE VIEW internshipByCompany as
 	SELECT * FROM internship ORDER BY companyName;
-CREATE VIEW companiesByName as
-		SELECT * FROM companies ORDER by companyName;
+CREATE VIEW companiesByBusinessSector as
+		SELECT * FROM companies ORDER by businessSector;
 .mode column
 SELECT * FROM internshipByDate;
 SELECT * FROM internshipByCompany;
 SELECT * FROM companies;
-SELECT * FROM companiesByName;
+SELECT * FROM companiesByBusinessSector;
 
 
 /*INSERT INTO internships VALUES 
