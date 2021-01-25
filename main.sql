@@ -10,23 +10,14 @@ CREATE TABLE companies
 	bussinessSector TEXT,
 	contactInfo TEXT
 );
-CREATE TABLE internships
-(
-	positionTitle TEXT,
-	companyName TEXT,
-	deadline DATE,
-	duration INTEGER,
-	responsibilities TEXT,
-	pay DOUBLE,
-	otherInfo TEXT
-);
-INSERT INTO internships VALUES 
-	('test0','sample0', date('2021-12-21'),100,'sample0',1.0,'null');
 CREATE VIEW internshipByDate as
 	SELECT * FROM internships ORDER BY deadline;
 DROP TABLE IF EXISTS internships;
+DROP TABLE IF EXISTS companies;
 .mode csv
 .import internships.csv internships
+.import companies.csv companies
+
 
 
 
