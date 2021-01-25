@@ -1,16 +1,19 @@
 .header on
-.mode column
 .mode csv
 .import internships.csv internships
 .import companies.csv companies
 CREATE VIEW internshipByDate as
 	SELECT * FROM internships ORDER BY deadline;
 CREATE VIEW internshipByCompany as
-	SELECT * FROM internship ORDER BY companyName
+	SELECT * FROM internship ORDER BY companyName;
+CREATE VIEW companiesByName as
+		SELECT * FROM companies ORDER by companyName;
 .mode column
 SELECT * FROM internshipByDate;
 SELECT * FROM internshipByCompany;
 SELECT * FROM companies;
+SELECT * FROM companiesByName;
+
 
 /*INSERT INTO internships VALUES 
 	('test0','sample0', date('2021-12-21'),100,'sample0',1.0,'null'),
