@@ -5,8 +5,12 @@
 .import companies.csv companies
 CREATE VIEW internshipByDate as
 	SELECT * FROM internships ORDER BY deadline;
+CREATE VIEW internshipByCompany as
+	SELECT * FROM internship ORDER BY companyName
 .mode column
 SELECT * FROM internshipByDate;
+SELECT * FROM internshipByCompany;
+SELECT * FROM companies;
 
 /*INSERT INTO internships VALUES 
 	('test0','sample0', date('2021-12-21'),100,'sample0',1.0,'null'),
